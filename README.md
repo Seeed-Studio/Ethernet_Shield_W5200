@@ -13,7 +13,7 @@ Ethernet shield provides you instant Internet connectivity with a high spec Ethe
 
 ----
 
-This software is based on Aduino Ethernet library and by Frankie Chu for seeed studio.
+This software is based on Aduino Ethernet library and modified by Frankie Chu for seeed studio.
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
 [forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
