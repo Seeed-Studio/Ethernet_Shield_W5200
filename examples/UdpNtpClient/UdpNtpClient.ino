@@ -11,7 +11,8 @@
  by Michael Margolis
  modified 9 Apr 2012
  by Tom Igoe
- 
+ modified 10 Feb 2015
+ by Alan Shiflett
  This code is in the public domain.
 
  */
@@ -24,6 +25,8 @@
 // Newer Ethernet shields have a MAC address printed on a sticker on the shield
 byte mac[] = {  
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+
+IPAddress ip(192, 168, 1, 177);
 
 unsigned int localPort = 8888;      // local port to listen for UDP packets
 
@@ -55,6 +58,7 @@ void setup()
     for(;;)
       ;
   }
+  Ethernet.begin(mac, ip);
   Udp.begin(localPort);
 }
 
