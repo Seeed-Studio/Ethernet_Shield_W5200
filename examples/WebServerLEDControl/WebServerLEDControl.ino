@@ -13,6 +13,9 @@
  *          version of the shield:
  *          http://www.seeedstudio.com/depot/W5200-Ethernet-Shield-p-1577.html
  *  
+ *          For more detail instructions and example output see:
+ *          http://www.seeedstudio.com/wiki/Ethernet_Shield_V2.4
+ *  
  * @circuit Stack the W5200 Ethernet Shield from Seeed Studio on 
  *          the Arduino board. Connect Three leds and 1k
  *          resistors to pins 2, 3, and 5.
