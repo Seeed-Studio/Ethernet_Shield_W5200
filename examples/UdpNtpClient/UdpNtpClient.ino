@@ -11,7 +11,8 @@
  by Michael Margolis
  modified 9 Apr 2012
  by Tom Igoe
- 
+ modified 10 Feb 2015
+ by Alan Shiflett
  This code is in the public domain.
 
  */
@@ -25,9 +26,11 @@
 byte mac[] = {  
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
+IPAddress ip(192, 168, 1, 177);
+
 unsigned int localPort = 8888;      // local port to listen for UDP packets
 
-IPAddress timeServer(192, 43, 244, 18); // time.nist.gov NTP server
+IPAddress timeServer(129, 6, 15, 28); // time-a.nist.gov NTP server
 
 const int NTP_PACKET_SIZE= 48; // NTP time stamp is in the first 48 bytes of the message
 
@@ -55,6 +58,7 @@ void setup()
     for(;;)
       ;
   }
+  Ethernet.begin(mac, ip);
   Udp.begin(localPort);
 }
 
