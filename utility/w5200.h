@@ -353,6 +353,10 @@ private:
   inline static void initSS()    { DDRB  |=  _BV(0); };
   inline static void setSS()     { PORTB &= ~_BV(0); };
   inline static void resetSS()   { PORTB |=  _BV(0); }; 
+#elif defined (ARDUINO_SAM_DUE)
+	inline static void initSS() { pinMode(10, OUTPUT); };
+	inline static void setSS() { digitalWrite(10, LOW); };
+	inline static void resetSS() { digitalWrite(10, HIGH); };
 #else
   inline static void initSS()    { DDRB  |=  _BV(2); };
   inline static void setSS()     { PORTB &= ~_BV(2); };
