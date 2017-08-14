@@ -122,11 +122,16 @@ void W5100Class::recv_data_processing(SOCKET s, uint8_t *data, uint16_t len, uin
 
 void W5100Class::read_data(SOCKET s, volatile uint8_t *src, volatile uint8_t *dst, uint16_t len)
 {
+#ifdef ARDUINO_SAM_DUE
+#define MASK_DATA_TYPE uint32_t
+#else
+#define MASK_DATA_TYPE uint16_t
+#endif
   uint16_t size;
-  uint16_t src_mask;
+  MASK_DATA_TYPE src_mask;
   uint16_t src_ptr;
 
-  src_mask = (uint16_t)src & RMASK;
+  src_mask = (MASK_DATA_TYPE)src & RMASK;
   src_ptr = RBASE[s] + src_mask;
 
   if( (src_mask + len) > RSIZE ) 
