@@ -60,8 +60,8 @@ long lastReadingTime = 0;
 void setup() {
   // start the SPI library:
   SPI.begin();
-　pinMode(SDCARD_CS,OUTPUT);
- digitalWrite(SDCARD_CS,HIGH);//Deselect the SD card
+  pinMode(SDCARD_CS,OUTPUT);
+  digitalWrite(SDCARD_CS,HIGH);//Deselect the SD card
   // start the Ethernet connection and the server:
   Ethernet.begin(mac, ip);
   server.begin();
