@@ -7,9 +7,8 @@
 
 #include <EthernetUdpV2_0.h>
 
-class DNSClient
-{
-public:
+class DNSClient {
+  public:
     // ctor
     void begin(const IPAddress& aDNSServer);
 
@@ -19,7 +18,7 @@ public:
         @result 1 if aIPAddrString was successfully converted to an IP address,
                 else error code
     */
-    int inet_aton(const char *aIPAddrString, IPAddress& aResult);
+    int inet_aton(const char* aIPAddrString, IPAddress& aResult);
 
     /** Resolve the given hostname to an IP address.
         @param aHostname Name to be resolved
@@ -29,7 +28,7 @@ public:
     */
     int getHostByName(const char* aHostname, IPAddress& aResult);
 
-protected:
+  protected:
     uint16_t BuildRequest(const char* aName);
     uint16_t ProcessResponse(uint16_t aTimeout, IPAddress& aAddress);
 
