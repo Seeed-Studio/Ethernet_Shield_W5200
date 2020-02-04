@@ -1,4 +1,4 @@
-## Ethernet_Shield_W5200
+## Ethernet_Shield_W5200  [![Build Status](https://travis-ci.com/Seeed-Studio/Ethernet_Shield_W5200.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Ethernet_Shield_W5200)
 
 ![](https://raw.githubusercontent.com/SeeedDocument/W5500_Ethernet_Shield_v1.0/master/img/W5500.jpg)
 
